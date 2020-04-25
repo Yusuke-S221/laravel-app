@@ -17,6 +17,7 @@ class ExampleTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200)
-            ->assertViewIs('welcome');
+            ->assertViewIs('welcome')
+            ->assertSee('Laravel');
     }
 }
