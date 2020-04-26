@@ -8,6 +8,18 @@ class ArticleController extends Controller
 {
     public function index()
     {
-      return view('articles.index');
+      $article = [
+        (object) [
+          'id' => 1,
+          'title' => 'タイトル1',
+          'body' => '本文1',
+          'created_at' => now(),
+          'user' => (object) [
+              'id' => 1,
+              'name' => 'ユーザー名1'
+          ],
+        ],
+      ];
+      return view('articles.index', ['article' => $article]);
     }
 }
