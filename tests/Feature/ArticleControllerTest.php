@@ -17,8 +17,9 @@ class ArticleControllerTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200)
+        $response->assertOk()
                  ->assertViewIs('articles.index')
                  ->assertSee('タイトル1');
     }
 }
+
