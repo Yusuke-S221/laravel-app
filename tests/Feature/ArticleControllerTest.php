@@ -19,7 +19,9 @@ class ArticleControllerTest extends TestCase
 
         $response->assertOk()
                  ->assertViewIs('articles.index')
-                 ->assertSee('タイトル1');
+                 ->assertSee('タイトル1')
+                 ->assertSee('ユーザー登録');
+
     }
 }
 
