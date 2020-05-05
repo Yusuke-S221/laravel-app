@@ -21,7 +21,7 @@ class ArticleControllerTest extends TestCase
                  ->assertViewIs('articles.index')
                  ->assertSee('タイトル1')
                  ->assertSee('ユーザー登録');
-
+                // Articleモデル作成まで完了
     }
 }
 
