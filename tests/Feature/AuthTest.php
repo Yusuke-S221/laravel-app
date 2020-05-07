@@ -15,8 +15,9 @@ class AuthTest extends TestCase
      */
     public function testExample()
     {
-        $response = $this->get('/');
+        $response = $this->get('register');
 
-        $response->assertDatabaseHas('users',['id' => 1]);
+        $response->assertDatabaseHas('users',['id' => 1])
+                 ->assertViewIs('auth.register');
     }
 }
